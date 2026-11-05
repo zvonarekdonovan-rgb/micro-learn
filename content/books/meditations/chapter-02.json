@@ -1,0 +1,67 @@
+{
+  "lessons": [
+    {
+      "id": "ch02-l1",
+      "title": "Live in the Hour You Have",
+      "minutes": 3,
+      "reviewed": true,
+      "hook": "Where was your mind during your last meal: on the food, or on tomorrow's to-do list?",
+      "idea": "The past is finished and the future hasn't arrived yet. The only moment you can actually act in is this one.\n\nWorry about next month and regret about last year both pull attention away from the one place you can do something. Coming back to the present isn't ignoring the future. It's how you build it.",
+      "example": "Sam has a big exam in two weeks. Every evening he thinks about the whole syllabus at once and ends up too overwhelmed to start.\n\nHe changes the question to: \"What can I learn in the next 45 minutes?\" The overwhelm fades. By exam day he has covered more than he did in the whole month before.",
+      "quiz": {
+        "question": "Sam felt overwhelmed by a big exam. What shift helped him most?",
+        "options": [
+          "Thinking about the entire syllabus every night",
+          "Focusing on what he could do in the next 45 minutes",
+          "Waiting until he felt motivated",
+          "Studying only the night before"
+        ],
+        "answer": 1,
+        "explanation": "Shrinking the focus to the next small block of time turned a frightening mountain into a step he could actually take."
+      },
+      "action": "Set a timer for 10 minutes and do one task with your full attention.\n\nEach time your mind drifts to the past or the future, notice it without judging yourself, and gently come back."
+    },
+    {
+      "id": "ch02-l2",
+      "title": "Do One Thing Completely",
+      "minutes": 2,
+      "reviewed": true,
+      "hook": "How many \"open tabs\" are running in your head right now?",
+      "idea": "Splitting your attention feels productive, but it usually makes each task slower and sloppier.\n\nDoing one thing at a time, and doing it as if it matters, gives you better work and a quieter mind. Even small tasks done fully can become a source of steadiness.",
+      "example": "Ana, a nurse, used to write notes while answering questions and planning her next visit all at once. Her shifts felt frantic.\n\nShe tried finishing each small task before starting the next: wash hands fully, write the note fully, then move on. Her shifts felt calmer, and she had to correct far fewer notes at the end of the day.",
+      "quiz": {
+        "question": "Why does doing one thing at a time help, according to this lesson?",
+        "options": [
+          "It gives better results and a calmer mind",
+          "It lets you avoid hard tasks",
+          "It means you never have to plan",
+          "It only matters for big, important tasks"
+        ],
+        "answer": 0,
+        "explanation": "Full attention improves the work itself and lowers the background noise in your head, even for small tasks."
+      },
+      "action": "Choose one routine task today, like washing the dishes, answering an email or taking a short walk.\n\nGive it your complete attention from start to finish."
+    },
+    {
+      "id": "ch02-l3",
+      "title": "Let Limited Time Sharpen Your Choices",
+      "minutes": 3,
+      "reviewed": true,
+      "hook": "Imagine counting how many more summers you'll get. Does the number make today feel a little more valuable?",
+      "idea": "Remembering that your time is limited isn't meant to be gloomy. It works like a filter.\n\nIt helps you drop petty grudges, busywork and endless \"someday\" plans, and spend your hours on what actually matters to you.",
+      "example": "Jordan kept putting off calling an old friend \"until things calm down.\" Months went by.\n\nWhen a relative fell suddenly ill, Jordan realised \"later\" isn't guaranteed. They called the friend that same evening. Now the two of them talk every month, and Jordan says it's one of the best parts of their week.",
+      "quiz": {
+        "question": "How does remembering that time is limited help, according to this lesson?",
+        "options": [
+          "It makes you anxious, so you work harder",
+          "It helps you let go of small things and act on what matters",
+          "It shows that planning is pointless",
+          "It encourages you to rush through everything"
+        ],
+        "answer": 1,
+        "explanation": "It's a filter, not a source of fear. It makes it easier to see what deserves your time."
+      },
+      "action": "Name one meaningful thing you've been putting off \"until later.\"\n\nTake the first small step today, even a two-minute version of it."
+    }
+  ]
+}

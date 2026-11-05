@@ -1,0 +1,26 @@
+{
+  "pathTitle": "The Steady Mind",
+  "description": "Twenty short chapters on staying calm, clear and kind when life gets busy, in about 3 minutes a lesson.",
+  "chapters": [
+    { "id": "ch01", "title": "Stay Steady When Things Go Wrong", "goal": "Spend your energy only where it can make a difference.", "file": "chapter-01.json" },
+    { "id": "ch02", "title": "Give Your Full Attention to Today", "goal": "Get more from the time you actually have.", "file": "chapter-02.json" },
+    { "id": "ch03", "title": "Stay Kind When Others Aren't", "file": null },
+    { "id": "ch04", "title": "Do the Right Thing Without an Audience", "file": null },
+    { "id": "ch05", "title": "Turn Setbacks Into Practice", "file": null },
+    { "id": "ch06", "title": "Care Less About Praise and Blame", "file": null },
+    { "id": "ch07", "title": "Keep Your Character Under Pressure", "file": null },
+    { "id": "ch08", "title": "Make Peace With Change", "file": null },
+    { "id": "ch09", "title": "Work Well With Difficult Teammates", "file": null },
+    { "id": "ch10", "title": "Need Less, Enjoy More", "file": null },
+    { "id": "ch11", "title": "Quiet an Anxious Mind", "file": null },
+    { "id": "ch12", "title": "Be Honest With Yourself", "file": null },
+    { "id": "ch13", "title": "Cool Down Anger Faster", "file": null },
+    { "id": "ch14", "title": "Live by Values You Chose", "file": null },
+    { "id": "ch15", "title": "Face Loss With Steadiness", "file": null },
+    { "id": "ch16", "title": "Lead Without Ego", "file": null },
+    { "id": "ch17", "title": "Build a Five-Minute Reflection Habit", "file": null },
+    { "id": "ch18", "title": "Find Meaning in Ordinary Duties", "file": null },
+    { "id": "ch19", "title": "See Your Part in Something Bigger", "file": null },
+    { "id": "ch20", "title": "Write Your Personal Code", "file": null }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "books": [
+    {
+      "id": "meditations",
+      "title": "Meditations",
+      "author": "Marcus Aurelius",
+      "cover": "covers/meditations.svg",
+      "folder": "content/books/meditations"
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "lessons": [
+    {
+      "id": "ch01-l1",
+      "title": "Sort What You Can Steer",
+      "minutes": 3,
+      "reviewed": true,
+      "hook": "Think of the last time you lay awake worrying. How much of that worry was about something you could actually do anything about that night?",
+      "idea": "Some things respond to your choices: your effort, your words, how you treat people, what you do next. Many things don't: the weather, traffic, other people's moods, what already happened.\n\nStress grows when we pour energy into the second group. Calm grows when we notice the difference and put our effort where it can actually change something.",
+      "example": "Priya's train is cancelled on the morning of a job interview. She can't make the train run. She can send the interviewer a quick message, book a ride, and use the extra twenty minutes in the car to review her notes.\n\nShe arrives ten minutes late but composed. Later the interviewer tells her the calm way she handled the delay was what they remembered most.",
+      "quiz": {
+        "question": "Your flight is delayed by three hours. Which response puts your energy where it can make a difference?",
+        "options": [
+          "Replaying how unfair the airline is being",
+          "Checking whether your connection is affected and rebooking if needed",
+          "Wishing you had chosen a different day to travel",
+          "Refreshing the departures board every two minutes"
+        ],
+        "answer": 1,
+        "explanation": "The delay itself isn't yours to steer, but sorting out your connection is. That's where effort pays off."
+      },
+      "action": "Write down one thing that's bothering you today. Split it into two short lists: \"Not mine to steer\" and \"My next move.\"\n\nThen do the next move, even if it's tiny."
+    },
+    {
+      "id": "ch01-l2",
+      "title": "Separate What Happened From the Story",
+      "minutes": 3,
+      "reviewed": true,
+      "hook": "A friend leaves your message unanswered for six hours. Within minutes, your mind has written a whole drama about why.",
+      "idea": "An event is what a camera would record. A story is the meaning we add on top, like \"they're annoyed with me\" or \"this is a disaster.\"\n\nA lot of our upset comes from the story, not the event. When you notice the gap between the two, you can choose an explanation that's calmer and often more accurate.",
+      "example": "Marco's manager sends a message late on Thursday: \"Can we talk tomorrow?\" Marco's first story: I'm in trouble.\n\nHe writes down the camera version instead: \"My manager wants a conversation tomorrow.\" Then he lists three other possibilities: a new project, a scheduling question, feedback on last week's report. He sleeps fine. The meeting is about a new project.",
+      "quiz": {
+        "question": "Which of these is the \"camera version\" of an event?",
+        "options": [
+          "My coworker ignored me on purpose",
+          "My coworker walked past without saying hello",
+          "My coworker clearly doesn't respect me",
+          "My coworker is in a terrible mood"
+        ],
+        "answer": 1,
+        "explanation": "Only this one describes what could actually be seen. The others add a story about what it means."
+      },
+      "action": "The next time something stings today, write down only the facts, as a camera would record them.\n\nThen list two other possible explanations before you decide what it means."
+    },
+    {
+      "id": "ch01-l3",
+      "title": "Pause Before You Respond",
+      "minutes": 2,
+      "reviewed": true,
+      "hook": "Have you ever sent a reply in ten seconds and then spent ten days wishing you hadn't?",
+      "idea": "Between something happening and your response, there's a short space. Strong feelings shrink it until it almost disappears. A deliberate pause opens it back up.\n\nInside that pause, one question helps: \"What response would I be glad I chose a week from now?\"",
+      "example": "Lena gets a sharp comment about her presentation in a team chat. She types a fiery reply, then saves it as a draft and goes to make tea.\n\nTwenty minutes later she writes: \"Thanks for the feedback. Which part didn't work for you?\" The conversation turns useful, and her teammates notice how she handled it.",
+      "quiz": {
+        "question": "What's the main purpose of pausing before you respond?",
+        "options": [
+          "To make the other person wait",
+          "To hide how you feel forever",
+          "To give yourself room to choose a response you'd stand behind",
+          "To avoid ever disagreeing with anyone"
+        ],
+        "answer": 2,
+        "explanation": "The pause isn't about hiding feelings or avoiding conflict. It gives you space to choose your response on purpose."
+      },
+      "action": "Pick a \"pause signal\" for today: three slow breaths, a sip of water, or counting to ten.\n\nUse it at least once before replying to something that irritates you."
+    }
+  ]
+}

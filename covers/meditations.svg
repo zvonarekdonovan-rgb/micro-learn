@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 600">
+  <!-- Simple original placeholder: a sun over layered hills. Replace with your own image. -->
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#4f8f7f"/>
+      <stop offset="1" stop-color="#21443b"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="600" fill="url(#sky)"/>
+  <circle cx="200" cy="250" r="88" fill="#f2d49b"/>
+  <path d="M0 410 Q100 350 200 400 T400 390 V600 H0 Z" fill="#2f6356"/>
+  <path d="M0 470 Q120 420 220 468 T400 455 V600 H0 Z" fill="#1b3a33"/>
+  <text x="200" y="560" font-family="sans-serif" font-size="18" fill="#f7f3ec" text-anchor="middle" opacity="0.6">placeholder cover</text>
+</svg>
