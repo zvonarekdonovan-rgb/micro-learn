@@ -158,34 +158,39 @@ export async function renderLesson(app, bookId, lessonId) {
     return true;
   }
 
-  viewport.addEventListener("pointerdown", (e) => {
-    if (e.pointerType === "mouse" && e.button !== 0) return;
-    startX = lastX = e.clientX;
-    startY = e.clientY;
-    lastTime = e.timeStamp;
+  // The same drag logic is fed by touch events (phones) and pointer
+  // events (mouse). Phones use touch events because they let us claim a
+  // sideways move with preventDefault(), which works on every phone,
+  // while pointer events get cancelled whenever the browser decides to scroll.
+  function startDrag(x, y, time) {
+    startX = lastX = x;
+    startY = y;
+    lastTime = time;
     dragX = 0;
     velocity = 0;
     dragging = false;
-  });
-  viewport.addEventListener("pointermove", (e) => {
-    if (startX === null) return;
-    dragX = e.clientX - startX;
-    const dy = e.clientY - startY;
+  }
+
+  // Returns true while this gesture is a sideways drag (so the caller can
+  // stop the browser from scrolling).
+  function moveDrag(x, y, time) {
+    if (startX === null) return false;
+    dragX = x - startX;
+    const dy = y - startY;
 
     if (!dragging) {
       // Moving mostly up/down? That's scrolling the card, not a swipe.
-      if (Math.abs(dy) > 10 && Math.abs(dy) > Math.abs(dragX)) { startX = null; return; }
-      if (Math.abs(dragX) < 10) return;
+      if (Math.abs(dy) > 10 && Math.abs(dy) > Math.abs(dragX)) { startX = null; return false; }
+      if (Math.abs(dragX) < 10) return false;
       dragging = true;
       track.style.transition = "none"; // follow the finger exactly
       cardEls[index].classList.add("dragging");
-      viewport.setPointerCapture?.(e.pointerId);
     }
 
-    const dt = e.timeStamp - lastTime;
-    if (dt > 0) velocity = 0.8 * ((e.clientX - lastX) / dt) + 0.2 * velocity;
-    lastX = e.clientX;
-    lastTime = e.timeStamp;
+    const dt = time - lastTime;
+    if (dt > 0) velocity = 0.8 * ((x - lastX) / dt) + 0.2 * velocity;
+    lastX = x;
+    lastTime = time;
 
     // Rubber-band when there's nowhere to go (first card, last card, unanswered quiz).
     const blocked = !canMove(dragX < 0 ? 1 : -1);
@@ -194,7 +199,9 @@ export async function renderLesson(app, bookId, lessonId) {
     // Tilt the card a little, like holding it by the bottom.
     const tilt = Math.max(-6, Math.min(6, shown * 0.03));
     cardEls[index].style.transform = `rotate(${tilt}deg)`;
-  });
+    return true;
+  }
+
   function endDrag() {
     if (startX === null) return;
     startX = null;
@@ -215,9 +222,30 @@ export async function renderLesson(app, bookId, lessonId) {
       update(); // snap back
     }
   }
-  viewport.addEventListener("pointerup", endDrag);
-  viewport.addEventListener("pointercancel", endDrag);
-  viewport.addEventListener("pointerleave", endDrag);
+  // Phones and tablets
+  viewport.addEventListener("touchstart", (e) => {
+    if (e.touches.length !== 1) return (startX = null); // ignore pinch-zoom
+    const t = e.touches[0];
+    startDrag(t.clientX, t.clientY, e.timeStamp);
+  }, { passive: true });
+  viewport.addEventListener("touchmove", (e) => {
+    const t = e.touches[0];
+    if (moveDrag(t.clientX, t.clientY, e.timeStamp) && e.cancelable) e.preventDefault();
+  }, { passive: false }); // passive: false is required for preventDefault to work
+  viewport.addEventListener("touchend", endDrag);
+  viewport.addEventListener("touchcancel", endDrag);
+
+  // Mouse (and pen)
+  viewport.addEventListener("pointerdown", (e) => {
+    if (e.pointerType === "touch" || e.button !== 0) return;
+    startDrag(e.clientX, e.clientY, e.timeStamp);
+  });
+  viewport.addEventListener("pointermove", (e) => {
+    if (e.pointerType === "touch") return;
+    if (moveDrag(e.clientX, e.clientY, e.timeStamp)) viewport.setPointerCapture?.(e.pointerId);
+  });
+  viewport.addEventListener("pointerup", (e) => { if (e.pointerType !== "touch") endDrag(); });
+  viewport.addEventListener("pointerleave", (e) => { if (e.pointerType !== "touch") endDrag(); });
   // A drag that ends on a button shouldn't also "click" it.
   viewport.addEventListener("click", (e) => {
     if (justDragged) { e.stopPropagation(); e.preventDefault(); }
