@@ -75,7 +75,14 @@ Work through this checklist in the browser:
 5. **Complete:** check animation, confetti and points appear.
 6. Finish all 3 lessons of Chapter 1: you see "Chapter complete", and
    "Done for today" after your 3rd lesson of the day. Chapter 2 is now unlocked.
-7. **Persistence:** refresh the page. All your progress is still there.
+7. **Phone swipes** (open DevTools device mode, or use a real phone):
+   - Book page: swipe right to go back to the library.
+   - Lesson: a short quick flick also changes cards; the first/last card and an
+     unanswered quiz "rubber-band" instead of moving. Scrolling a long card up/down
+     doesn't turn into a sideways swipe.
+   - Review: after answering, swipe left for the next question.
+   - Celebration screens: swipe left to continue.
+8. **Persistence:** refresh the page. All your progress is still there.
 
 ### Testing time-based features (streaks, freezes, reviews)
 

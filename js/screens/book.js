@@ -7,6 +7,7 @@ import {
   isLessonDone, LESSONS_PER_CHAPTER,
 } from "../progress.js";
 import { esc, statsBar, ring, coverImg, fixCovers, disclaimer } from "../ui.js";
+import { onSwipe } from "../swipe.js";
 
 export async function renderBook(app, bookId) {
   const book = await loadBook(bookId);
@@ -24,6 +25,7 @@ export async function renderBook(app, bookId) {
   }
 
   app.innerHTML = `
+    <div class="page" id="book-page">
     <header class="page-top">
       <a class="back" href="#/">‹ Library</a>
       ${statsBar()}
@@ -54,9 +56,12 @@ export async function renderBook(app, bookId) {
       ${book.chapters.map((chapter, i) => chapterItem(book, chapter, i, next)).join("")}
     </ol>
 
-    ${disclaimer(book)}`;
+    ${disclaimer(book)}
+    </div>`;
 
   fixCovers(app);
+  // Swipe right anywhere to go back to the library.
+  onSwipe(app.querySelector("#book-page"), { right: () => (location.hash = "#/") });
 }
 
 function chapterItem(book, chapter, index, next) {

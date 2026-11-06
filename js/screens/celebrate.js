@@ -4,6 +4,7 @@
 
 import { state, DAILY_GOAL, bookProgress } from "../progress.js";
 import { esc, disclaimer } from "../ui.js";
+import { onSwipe } from "../swipe.js";
 
 export function showCelebrations(app, moments, book, onDone) {
   let i = 0;
@@ -20,10 +21,12 @@ export function showCelebrations(app, moments, book, onDone) {
         ${screenFor(moment, book)}
         <button class="btn btn-primary btn-big" id="continue">${buttonLabel}</button>
       </div>`;
-    app.querySelector("#continue").addEventListener("click", () => {
+    const button = app.querySelector("#continue");
+    button.addEventListener("click", () => {
       i += 1;
       show();
     });
+    onSwipe(app.querySelector(".celebrate"), { left: () => button.click() });
     window.scrollTo(0, 0);
   }
 

@@ -5,6 +5,7 @@
 import { loadAllBooks, findLesson } from "../content.js";
 import { dueReviewKeys, recordReview, finishReview, POINTS } from "../progress.js";
 import { esc, progressBar } from "../ui.js";
+import { onSwipe } from "../swipe.js";
 
 const MAX_PER_SESSION = 5;
 
@@ -57,6 +58,7 @@ export async function renderReview(app) {
           <p class="feedback" aria-live="polite"></p>
         </div>
         <button class="btn btn-primary btn-big" id="next" hidden>${i === items.length - 1 ? "Finish review" : "Next"}</button>
+        <p class="swipe-hint swipe-hint-center" aria-hidden="true" hidden>or swipe left</p>
       </div>`;
 
     const buttons = [...app.querySelectorAll(".option")];
@@ -81,6 +83,7 @@ export async function renderReview(app) {
           feedback.innerHTML = `<strong>Good to refresh.</strong> ${esc(quiz.explanation)} We'll bring this one back tomorrow.`;
         }
         nextBtn.hidden = false;
+        app.querySelector(".swipe-hint").hidden = false;
         nextBtn.focus();
       });
     });
@@ -89,6 +92,11 @@ export async function renderReview(app) {
       i += 1;
       if (i < items.length) showItem();
       else showSummary();
+    });
+
+    // Once answered, swipe left to move on (same as pressing Next).
+    onSwipe(app.querySelector(".review"), {
+      left: () => { if (!nextBtn.hidden) nextBtn.click(); },
     });
   }
 
